@@ -44,12 +44,7 @@ public class HomeFragment extends Fragment {
 
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
-
-        getData = binding.fetch;
-        getData.setOnClickListener((View v) -> {
-            fetchData();
-        });
-
+        fetchData();
 
 
         return root;
