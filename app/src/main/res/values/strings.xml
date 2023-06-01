@@ -14,6 +14,7 @@
     <string name="menu_gallery">Set Goal</string>
     <string name="menu_slideshow">Notes</string>
     <string name="menu_messages">Messages</string>
+    <string name="menu_stepcounter">Step Counter</string>
     <string name="title_activity_home">HomeActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
