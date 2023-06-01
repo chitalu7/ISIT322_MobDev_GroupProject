@@ -1,16 +1,16 @@
-package com.hfad.globegoproject.ui.messages;
+package com.hfad.globegoproject.ui.stepcounter;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class MessagesViewModel extends ViewModel {
+public class StepCounterViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public MessagesViewModel() {
+    public StepCounterViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is Messages fragment");
+        mText.setValue("This is the Step Counter fragment");
     }
 
     public LiveData<String> getText() {

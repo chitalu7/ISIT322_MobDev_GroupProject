@@ -28,4 +28,23 @@
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 
+    <fragment
+        android:id="@+id/nav_stepcounter"
+        android:name="com.hfad.globegoproject.ui.stepcounter.StepCounterFragment"
+        android:label="@string/menu_stepcounter"
+        tools:layout="@layout/fragment_step_counter"/>
+
+<!--        <action-->
+<!--            android:id="@+id/action_to_geo_step_counter_demo"-->
+<!--            app:destination="@id/geoStepCounterDemoActivity"-->
+<!--            />-->
+<!--    </fragment>-->
+
+<!--    <activity-->
+<!--        android:id="@+id/geoStepCounterDemoActivity"-->
+<!--        android:name="com.hfad.globegoproject.GeoStepCounterDemoActivity"-->
+<!--        android:label="Destination">-->
+<!--    </activity>-->
+
+
 </navigation>

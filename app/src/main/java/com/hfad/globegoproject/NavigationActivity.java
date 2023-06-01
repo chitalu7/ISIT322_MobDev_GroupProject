@@ -1,5 +1,6 @@
 package com.hfad.globegoproject;
 
+import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -42,6 +43,7 @@ public class NavigationActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityNavigationBinding binding;
+//    private ActivityNavigationBinding bindingToGeoStepCounter;
 
 
 
@@ -54,14 +56,16 @@ public class NavigationActivity extends AppCompatActivity {
         binding = ActivityNavigationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+//        bindingToGeoStepCounter = ActivityNavigationBinding.inflate(getLayoutInflater());
+//        setContentView(bindingToGeoStepCounter.getRoot());
+
         setSupportActionBar(binding.appBarNavigation.toolbar);
-        binding.appBarNavigation.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//        bindingToGeoStepCounter.appBarNavigation.fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+////                navigateToGeoStepCounter();
+//            }
+//        });
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
@@ -74,9 +78,22 @@ public class NavigationActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+        //, R.id.nav_stepcounter)
+        //Set up click listener for Step Counter
+        binding.appBarNavigation.fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+            }
+        });
 
     }
 
+//    private void navigateToGeoStepCounter() {
+//        Intent intent = new Intent(this, GeoStepCounterDemoActivity.class);
+//        startActivity(intent);
+//    }
 
 
     @Override
@@ -92,6 +109,9 @@ public class NavigationActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
+
 
     /*******
      *

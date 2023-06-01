@@ -19,7 +19,12 @@
         <item
             android:id="@+id/nav_messages"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Messages" />
+            android:title="@string/menu_messages" />
+
+        <item
+            android:id="@+id/nav_stepcounter"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_stepcounter" />
 
     </group>
 </menu>
