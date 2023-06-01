@@ -5,11 +5,7 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_home">
 
-    <fragment
-        android:id="@+id/nav_messages"
-        android:name="com.hfad.globegoproject.ui.messages.MessagesFragment"
-        android:label="@string/menu_messages"
-        tools:layout="@layout/fragment_messages" />
+
     <fragment
         android:id="@+id/nav_home"
         android:name="com.hfad.globegoproject.ui.home.HomeFragment"
@@ -28,13 +24,20 @@
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 
-    <fragment
-        android:id="@+id/nav_stepcounter"
-        android:name="com.hfad.globegoproject.ui.stepcounter.StepCounterFragment"
-        android:label="@string/menu_stepcounter"
-        tools:layout="@layout/fragment_step_counter"/>
+    <activity
+        android:id="@+id/nav_geo_step_counter_demo"
+        android:name="com.hfad.globegoproject.ui.geostepcounter.GeoStepCounterDemoActivity"
+        android:label="@string/menu_geo_step_counter_demo"
+        tools:layout="@layout/activity_geo_step_counter_demo"/>
 
-<!--        <action-->
+    <fragment
+        android:id="@+id/nav_messages"
+        android:name="com.hfad.globegoproject.ui.messages.MessagesFragment"
+        android:label="@string/menu_messages"
+        tools:layout="@layout/fragment_messages" />
+
+
+    <!--        <action-->
 <!--            android:id="@+id/action_to_geo_step_counter_demo"-->
 <!--            app:destination="@id/geoStepCounterDemoActivity"-->
 <!--            />-->

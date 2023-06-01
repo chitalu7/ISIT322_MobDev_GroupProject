@@ -16,6 +16,7 @@
     <string name="menu_messages">Messages</string>
     <string name="menu_stepcounter">Step Counter</string>
     <string name="title_activity_home">HomeActivity</string>
+    <string name="menu_geo_step_counter_demo">Geo Step Counter</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
