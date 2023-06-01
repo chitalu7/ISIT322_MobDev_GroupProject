@@ -17,14 +17,13 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_slideshow" />
         <item
+            android:id="@+id/nav_geo_step_counter_demo"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_geo_step_counter_demo" />
+        <item
             android:id="@+id/nav_messages"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_messages" />
-
-        <item
-            android:id="@+id/nav_stepcounter"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_stepcounter" />
 
     </group>
 </menu>
