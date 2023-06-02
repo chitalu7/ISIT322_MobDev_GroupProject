@@ -12,29 +12,39 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
-    <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.hfad.globegoproject.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.hfad.globegoproject.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-
     <activity
-        android:id="@+id/nav_geo_step_counter_demo"
+        android:id="@+id/nav_set_goals"
         android:name="com.hfad.globegoproject.ui.geostepcounter.GeoStepCounterDemoActivity"
-        android:label="@string/menu_geo_step_counter_demo"
+        android:label="@string/menu_set_goal"
         tools:layout="@layout/activity_geo_step_counter_demo"/>
 
     <fragment
-        android:id="@+id/nav_messages"
+        android:id="@+id/nav_post_messages"
         android:name="com.hfad.globegoproject.ui.messages.MessagesFragment"
-        android:label="@string/menu_messages"
-        tools:layout="@layout/fragment_messages" />
+        android:label="@string/menu_post_messages"
+        tools:layout="@layout/fragment_messages"/>
+
+    <fragment
+        android:id="@+id/nav_view_all_messages"
+        android:name="com.hfad.globegoproject.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_view_all_messages"
+        tools:layout="@layout/fragment_slideshow" />
+
+
+
+<!--    <fragment-->
+<!--        android:id="@+id/nav_post_messages"-->
+<!--        android:name="com.hfad.globegoproject.ui.messages.MessagesFragment"-->
+<!--        android:label="@string/menu_post_messages"-->
+<!--        tools:layout="@layout/fragment_messages" />-->
+
+
+
+
+
+
+
+
 
 
     <!--        <action-->

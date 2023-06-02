@@ -20,7 +20,7 @@
         <activity
             android:name=".ui.geostepcounter.GeoStepCounterDemoActivity"
             android:exported="false"
-            android:label="@string/menu_geo_step_counter_demo"
+            android:label="@string/menu_set_goal"
             android:theme="@style/Theme.GlobeGoProject.NoActionBar" />
         <activity
             android:name=".MainActivity"
