@@ -18,11 +18,11 @@
         android:label="@string/menu_set_goal"
         tools:layout="@layout/activity_geo_step_counter_demo"/>
 
-    <fragment
+    <activity
         android:id="@+id/nav_post_messages"
-        android:name="com.hfad.globegoproject.ui.messages.MessagesFragment"
+        android:name="com.hfad.globegoproject.ui.postviewmessages.PostMessageActivity"
         android:label="@string/menu_post_messages"
-        tools:layout="@layout/fragment_messages"/>
+        tools:layout="@layout/activity_post_message"/>
 
     <fragment
         android:id="@+id/nav_view_all_messages"
