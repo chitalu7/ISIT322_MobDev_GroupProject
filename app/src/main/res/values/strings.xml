@@ -10,13 +10,18 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <!-- MENU OF CHOICE - 060223 -->
     <string name="menu_home">Map</string>
-    <string name="menu_gallery">Set Goal</string>
-    <string name="menu_slideshow">Notes</string>
-    <string name="menu_messages">Messages</string>
-    <string name="menu_stepcounter">Step Counter</string>
+    <string name="menu_set_goal">Set Goal</string>
+    <string name="menu_post_messages">Post Message</string>
+    <string name="menu_view_all_messages">View All Messages</string>
+
+
+
+
+<!--    <string name="menu_gallery">Set Goal</string>-->
+<!--    <string name="menu_stepcounter">Step Counter</string>-->
     <string name="title_activity_home">HomeActivity</string>
-    <string name="menu_geo_step_counter_demo">Geo Step Counter</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>

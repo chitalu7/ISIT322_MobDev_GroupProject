@@ -8,22 +8,27 @@
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_home" />
+
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_set_goals"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:title="@string/menu_set_goal" />
+
         <item
-            android:id="@+id/nav_geo_step_counter_demo"
+            android:id="@+id/nav_post_messages"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_geo_step_counter_demo" />
+            android:title="@string/menu_post_messages" />
+
         <item
-            android:id="@+id/nav_messages"
+            android:id="@+id/nav_view_all_messages"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_messages" />
+            android:title="@string/menu_view_all_messages" />
+
+<!--        <item-->
+<!--            android:id="@+id/nav_gallery"-->
+<!--            android:icon="@drawable/ic_menu_gallery"-->
+<!--            android:title="@string/menu_gallery" />-->
+
 
     </group>
 </menu>
