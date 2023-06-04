@@ -1,4 +1,4 @@
-package com.hfad.globegoproject;
+package com.hfad.globegoproject.stepcounter;
 
 import android.location.Location;
 

@@ -1,4 +1,4 @@
-package com.hfad.globegoproject;
+package com.hfad.globegoproject.stepcounter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -17,18 +17,18 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.Executor;
 
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 
-public class GeoStepCounter implements SensorEventListener {
+public class GeoStepCounter implements StepCounterEventListener {
     private static final int SECONDS_PER_DAY = 60 * 60 * 24;
 
     public GeoStepCounter(AppCompatActivity activity) {
-        sensorManager = activity.getSystemService(SensorManager.class);
-        stepCounterSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
+        stepCounter = StepCounter.create(activity);
         locationManager = activity.getSystemService(LocationManager.class);
         geoLocationProviderName = getLocationProviderName();
         context = activity.getApplicationContext();
@@ -40,11 +40,11 @@ public class GeoStepCounter implements SensorEventListener {
         if (!checkLocationPermissions()) {
             throw new IllegalStateException("Location services are not accessible.");
         }
-        sensorManager.registerListener(this, stepCounterSensor, SensorManager.SENSOR_DELAY_UI);
+        stepCounter.start(this);
     }
 
     public void stop() {
-        sensorManager.unregisterListener(this);
+        stepCounter.stop();
     }
 
     public List<GeoStepCount> getGeoSteps() {
@@ -53,31 +53,25 @@ public class GeoStepCounter implements SensorEventListener {
 
     @SuppressLint("MissingPermission")
     @Override
-    public void onSensorChanged(SensorEvent sensorEvent) {
-        Float stepsCount = sensorEvent.values[0];
+    public void onStepCounterChange(int stepCount) {
         locationManager.getCurrentLocation(
                 geoLocationProviderName,
                 null,
                 executor,
                 (location) -> {
-                    GeoStepCount geoStepCount = new GeoStepCount(location, stepsCount);
+                    GeoStepCount geoStepCount = new GeoStepCount(location, stepCount);
                     geoSteps.add(geoStepCount);
                 });
-    }
 
-    @Override
-    public void onAccuracyChanged(Sensor sensor, int i) {
     }
 
     public boolean checkLocationPermissions() {
         return ActivityCompat.checkSelfPermission(context, ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
                 || ActivityCompat.checkSelfPermission(context, ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED;
     }
-    @NonNull
-    private final SensorManager sensorManager;
 
     @NonNull
-    private Sensor stepCounterSensor;
+    private final StepCounter stepCounter;
 
     @NonNull
     private final LocationManager locationManager;

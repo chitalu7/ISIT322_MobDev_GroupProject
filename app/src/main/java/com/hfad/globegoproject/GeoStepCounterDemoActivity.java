@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.hfad.globegoproject.stepcounter.GeoStepCounter;
+
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 import java.util.Objects;
