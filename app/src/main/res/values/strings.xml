@@ -13,8 +13,10 @@
     <!-- MENU OF CHOICE - 060223 -->
     <string name="menu_home">Map</string>
     <string name="menu_set_goal">Set Goal</string>
-    <string name="menu_post_messages">Post Message</string>
+    <string name="menu_post_message">Post Message</string>
     <string name="menu_view_all_messages">View All Messages</string>
+
+
 
 
     <!--    <string name="menu_gallery">Set Goal</string>-->

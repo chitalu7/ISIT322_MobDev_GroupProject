@@ -15,14 +15,16 @@
             android:title="@string/menu_set_goal" />
 
         <item
-            android:id="@+id/nav_post_messages"
+            android:id="@+id/nav_post_message"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_post_messages" />
+            android:title="@string/menu_post_message" />
 
         <item
             android:id="@+id/nav_view_all_messages"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_view_all_messages" />
+
+
 
 <!--        <item-->
 <!--            android:id="@+id/nav_gallery"-->
