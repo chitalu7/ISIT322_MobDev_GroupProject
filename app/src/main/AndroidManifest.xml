@@ -15,11 +15,7 @@
         tools:targetApi="31">
 
 
-        <activity
-            android:name=".ui.postviewmessages.PostMessageActivity"
-            android:exported="false"
-            android:label="@string/menu_post_messages"
-            android:theme="@style/Theme.GlobeGoProject.NoActionBar" />
+
         <activity
             android:name=".NavigationActivity"
             android:exported="false"
