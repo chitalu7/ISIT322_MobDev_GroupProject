@@ -16,7 +16,7 @@ class StepCounterAccelerometerImpl implements StepCounter, SensorEventListener {
     private static final int g = 981;
     private static final int MIN_SAMPLE_SIZE = 4;
     private static final long STEP_TIME_MILLIS_THRESHOLD = 100L;
-    private static final int ACCELERATION_STEP_THRESHOLD = 100;
+    private static final int ACCELERATION_STEP_THRESHOLD = 50;
 
     public StepCounterAccelerometerImpl(AppCompatActivity activity) {
         states = new LinkedList<>();
