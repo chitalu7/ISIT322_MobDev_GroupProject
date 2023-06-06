@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature
         android:name="android.hardware.sensor.stepcounter"
@@ -23,7 +24,20 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.GlobeGoProject"
-        tools:targetApi="TIRAMISU" >
+        tools:targetApi="31">
+
+
+
+        <activity
+            android:name=".NavigationActivity"
+            android:exported="false"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/Theme.GlobeGoProject.NoActionBar" />
+        <activity
+            android:name=".ui.geostepcounter.GeoStepCounterDemoActivity"
+            android:exported="false"
+            android:label="@string/menu_set_goal"
+            android:theme="@style/Theme.GlobeGoProject.NoActionBar" />
         <activity
             android:name=".GeoStepCounterDemoActivity"
             android:exported="true" >

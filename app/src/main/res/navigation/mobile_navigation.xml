@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.hfad.globegoproject.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <activity
+        android:id="@+id/nav_set_goals"
+        android:name="com.hfad.globegoproject.ui.geostepcounter.GeoStepCounterDemoActivity"
+        android:label="@string/menu_set_goal"
+        tools:layout="@layout/activity_geo_step_counter_demo"/>
+
+    <fragment
+        android:id="@+id/nav_post_message"
+        android:name="com.hfad.globegoproject.ui.postmessage.PostMessageFragment"
+        android:label="@string/menu_post_message"
+        tools:layout="@layout/fragment_post_message" />
+
+    <fragment
+        android:id="@+id/nav_view_all_messages"
+        android:name="com.hfad.globegoproject.ui.viewallmessages.ViewAllMessagesFragment"
+        android:label="@string/menu_view_all_messages"
+        tools:layout="@layout/fragment_view_all_messages" />
+
+
+
+
+<!--    <fragment-->
+<!--        android:id="@+id/nav_post_messages"-->
+<!--        android:name="com.hfad.globegoproject.ui.messages.MessagesFragment"-->
+<!--        android:label="@string/menu_post_messages"-->
+<!--        tools:layout="@layout/fragment_messages" />-->
+
+
+
+
+
+
+
+
+
+
+    <!--        <action-->
+<!--            android:id="@+id/action_to_geo_step_counter_demo"-->
+<!--            app:destination="@id/geoStepCounterDemoActivity"-->
+<!--            />-->
+<!--    </fragment>-->
+
+<!--    <activity-->
+<!--        android:id="@+id/geoStepCounterDemoActivity"-->
+<!--        android:name="com.hfad.globegoproject.GeoStepCounterDemoActivity"-->
+<!--        android:label="Destination">-->
+<!--    </activity>-->
+
+
+</navigation>
