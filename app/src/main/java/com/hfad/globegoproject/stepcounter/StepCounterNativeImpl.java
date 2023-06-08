@@ -1,18 +1,18 @@
 package com.hfad.globegoproject.stepcounter;
 
+import android.app.Activity;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Objects;
 
 class StepCounterNativeImpl implements StepCounter, SensorEventListener {
 
-    public StepCounterNativeImpl(AppCompatActivity activity) {
+    public StepCounterNativeImpl(Activity activity) {
         sensorManager = activity.getSystemService(SensorManager.class);
         stepCounterSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
     }
