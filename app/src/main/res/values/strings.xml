@@ -1,5 +1,4 @@
 <resources>
-    <string name="title_activity_step_counter_demo">StepCounterDemoActivity</string>
     <string name="app_name">WELCOME</string>
     <string name="welcome_text">Here lies the welcome page.</string>
 
