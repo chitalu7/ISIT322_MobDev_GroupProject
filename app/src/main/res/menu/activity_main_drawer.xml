@@ -15,6 +15,11 @@
             android:title="@string/menu_set_goal" />
 
         <item
+            android:id="@+id/nav_step_counter"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Step Counter"/>
+
+        <item
             android:id="@+id/nav_post_message"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_post_message" />

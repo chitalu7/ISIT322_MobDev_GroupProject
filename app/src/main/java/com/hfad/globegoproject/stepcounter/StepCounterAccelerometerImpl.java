@@ -1,12 +1,12 @@
 package com.hfad.globegoproject.stepcounter;
 
+import android.app.Activity;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -18,7 +18,7 @@ class StepCounterAccelerometerImpl implements StepCounter, SensorEventListener {
     private static final long STEP_TIME_MILLIS_THRESHOLD = 100L;
     private static final int ACCELERATION_STEP_THRESHOLD = 50;
 
-    public StepCounterAccelerometerImpl(AppCompatActivity activity) {
+    public StepCounterAccelerometerImpl(Activity activity) {
         states = new LinkedList<>();
         sensorManager = activity.getSystemService(SensorManager.class);
         accelerometerSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);

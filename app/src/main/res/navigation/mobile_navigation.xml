@@ -12,11 +12,11 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
-    <activity
-        android:id="@+id/nav_set_goals"
-        android:name="com.hfad.globegoproject.ui.geostepcounter.GeoStepCounterDemoActivity"
-        android:label="@string/menu_set_goal"
-        tools:layout="@layout/activity_geo_step_counter_demo"/>
+    <fragment
+        android:id="@+id/nav_step_counter"
+        android:name="com.hfad.globegoproject.ui.geostepcounter.GeoStepCounterFragment"
+        android:label="Step Counter"
+        tools:layout="@layout/fragment_geo_step_counter"/>
 
     <fragment
         android:id="@+id/nav_post_message"
