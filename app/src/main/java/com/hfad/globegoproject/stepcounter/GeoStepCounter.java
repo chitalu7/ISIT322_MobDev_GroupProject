@@ -1,23 +1,18 @@
 package com.hfad.globegoproject.stepcounter;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.hardware.Sensor;
-import android.hardware.SensorEvent;
-import android.hardware.SensorEventListener;
-import android.hardware.SensorManager;
 import android.location.LocationManager;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.Executor;
 
@@ -27,7 +22,7 @@ import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 public class GeoStepCounter implements StepCounterEventListener {
     private static final int SECONDS_PER_DAY = 60 * 60 * 24;
 
-    public GeoStepCounter(AppCompatActivity activity) {
+    public GeoStepCounter(Activity activity) {
         stepCounter = StepCounter.create(activity);
         locationManager = activity.getSystemService(LocationManager.class);
         geoLocationProviderName = getLocationProviderName();
