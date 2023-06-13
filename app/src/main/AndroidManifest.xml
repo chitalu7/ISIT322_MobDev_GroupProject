@@ -2,7 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.sensor.stepcounter"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -26,11 +32,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.geostepcounter.GeoStepCounterDemoActivity"
-            android:exported="false"
-            android:label="@string/menu_set_goal"
-            android:theme="@style/Theme.GlobeGoProject.NoActionBar" />
         <activity
 
             android:name=".MainActivity"
