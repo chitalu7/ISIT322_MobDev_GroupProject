@@ -17,20 +17,25 @@ public class DatabaseManager {
     private DatabaseHelper dbHelper;
 
     public DatabaseManager(Context context) {
+
         dbHelper = new DatabaseHelper(context);
     }
 
     public void open() {
+
         database = dbHelper.getWritableDatabase();
     }
 
     public void close() {
+
         dbHelper.close();
     }
 
-    public void insertData(String message) {
+    public void insertData(String message, double latitude, double longitude) {
         ContentValues values = new ContentValues();
         values.put("message", message);
+        values.put("latitude", latitude);
+        values.put("longitude", longitude);
         database.insert("my_table", null, values);
     }
 
