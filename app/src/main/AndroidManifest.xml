@@ -36,10 +36,8 @@
             android:value="YOUR_API_KEY" />
 
         <activity
-            android:name=".NavigationActivity"
-            android:exported="true"
-            android:label="@string/title_activity_navigation"
-            android:theme="@style/Theme.GlobeGoProject.NoActionBar">
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -47,8 +45,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".NavigationActivity"
+            android:exported="true"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/Theme.GlobeGoProject.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
