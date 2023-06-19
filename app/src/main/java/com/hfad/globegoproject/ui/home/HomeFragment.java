@@ -1,5 +1,9 @@
 package com.hfad.globegoproject.ui.home;
 
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
@@ -7,8 +11,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +23,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.hfad.globegoproject.R;
 import com.hfad.globegoproject.databinding.FragmentHomeBinding;
 import com.squareup.picasso.Picasso;
 
@@ -38,6 +45,8 @@ public class HomeFragment extends Fragment {
     TextView textView;
     Button getData;
     LinearLayout imageContainer;
+
+    FrameLayout mapContainer;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -116,7 +125,7 @@ public class HomeFragment extends Fragment {
                                         .resize(200, 200)  // Set the desired image dimensions// Adjust the scaling behavior
                                         .into(imageIcon);
 
-                                imageContainer.addView(imageIcon);
+                                imageContainer.addView(imageIcon, 1);//.addView(imageIcon);
 
 
 
@@ -134,4 +143,21 @@ public class HomeFragment extends Fragment {
             }
         });
     }
+
+
+    // Method to convert Drawable to Bitmap
+    public Bitmap drawableToBitmap(Drawable drawable) {
+        if (drawable instanceof BitmapDrawable) {
+            return ((BitmapDrawable) drawable).getBitmap();
+        }
+
+        int width = drawable.getIntrinsicWidth();
+        int height = drawable.getIntrinsicHeight();
+        Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
+        drawable.draw(canvas);
+        return bitmap;
+    }
+
 }
